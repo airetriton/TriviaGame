@@ -65,24 +65,40 @@ var timer;
 var counter = 60;
 var selectedAnswer;
 var startGame;
+var wrongLoss;
+var correctWin;
 
 
 //create the button to start the game and put it into the header
 
 	function headingBtn() {
 		startGame = $("<button>");
-		startGame.addClass("text-center btn btn-primary btn-lg");
+		startGame.addClass("text-center btn btn-primary btn-lg startBtn");
 		startGame.text("Start");
 		$("#header").html(startGame);
 	};
 
+	headingBtn();
+
+	$(".startBtn").on("click", function(event){
+		createTriviaForm();
+		timerTrivia();
+	});
+
+	function gameTimeOut (){
+		wrongLoss++;
+		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!";
+		$("#header").html(message);
+		setTimeout(wait, 10000);
+		}
+
+	function gameWin(){
+		correctWin++;
+		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You Win! You know a lot about dogs!";
+	}	
+
 //  You'll create a trivia form with multiple choice or true/false options (your choice).
-
-	// use id when narrowing to one, use a class to apply to a whole bunch of things.
-	//push an array, append an element (divs, buttons, ptags are virtual elements)
-
 	
-	//when u see a do - write a function for the form (performs an action (verb))
 	function createTriviaForm (){
 		// this will help loop through the array (remember to find your array words)
 

@@ -62,8 +62,19 @@ var questionArray = [
 	};
 
 var timer;
-var counter;
+var counter = 60;
+var selectedAnswer;
+var startGame;
 
+
+//create the button to start the game and put it into the header
+
+	function headingBtn() {
+		startGame = $("<button>");
+		startGame.addClass("text-center btn btn-primary btn-lg");
+		startGame.text("Start");
+		$("#header").html(startGame);
+	};
 
 //  You'll create a trivia form with multiple choice or true/false options (your choice).
 
@@ -76,30 +87,34 @@ var counter;
 		// this will help loop through the array (remember to find your array words)
 
 		for (i=0; i<questionsArray.length; i++){
-					question = $("<p class = 'text-center</p>");
-					$(".mainContainer").html(question);
+			question = $("<p class = 'text-center</p>");
+			$(".mainContainer").html(question);
+			
 
-					for(j=0; j<choices.length; j++){
-					choices();
-				};
+			for(j=0; j<choices.length; j++){
+			var answerBtn = $("<button>");
+			answerBtn.addClass("text-center btn btn-primary btn-lg answer");
+			answerBtn.text(choices[j]);
+			$(".mainContainer").append(answerBtn);
+			}
 
-				var newContainerDiv = $(“<div>”);  //create new div
-				newContainerDiv.attr("index", i);  //add the index number
-				container.appendChild(newContainerDiv);
-				var innerDiv = document.createElement('div');//create div inside a div
-				innerDiv.className = "question"; //name that new div
-				newContainerDiv.appendChild(innerDiv); //append that div
+			$(".answer").on("click", function(event)){
+				selectedAnswer = $(this).text();
 
-
-				};
+				if(selectedAnswer === correctAnswer){
+					triviaWin();
+					clearInterval(timer);
+				} else {
+					clearInterval(timer);
+					triviaLose();
+				}
+			}
+		};
+	};	
 
 				
 
-				var answerDiv = document.createElement('div');
-				answerDiv.className ="answer";
-				innerDiv.appendChild(answerDiv);
-
-				$(".mainContainer").append();
+				
 
 
 		};
@@ -107,6 +122,22 @@ var counter;
 
 		console.log(createTriviaForm);
 			
+
+			// var newContainerDiv = $(“<div>”);  //create new div
+				// newContainerDiv.attr("index", i);  //add the index number
+				// container.appendChild(newContainerDiv);
+				// var innerDiv = document.createElement('div');//create div inside a div
+				// innerDiv.className = "question"; //name that new div
+				// newContainerDiv.appendChild(innerDiv); //append that div
+
+
+				// var answerDiv = document.createElement('div');
+				// answerDiv.className ="answer";
+				// innerDiv.appendChild(answerDiv);
+
+				// $(".mainContainer").append();
+
+
 			//create, fill, add to page
 
 			// this all takes place inside of the first for loop - container div create an index for the correct answer, question div (this would be an attribute), 

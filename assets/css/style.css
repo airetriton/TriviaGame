@@ -1,0 +1,27 @@
+body {
+	background: url("../images/collagedog.jpg");
+	font-family: "Montserrat", "Comic Sans", "Palatino Linotype", Impact, sans-serif;
+
+}
+
+#header {
+	background: #faebd7;
+	opacity: .9;
+	text-align: center;
+	color: #53868b;
+	border: solid 5px #eedfcc;
+	border-radius: 20px;
+}
+
+.container {
+	background: white;
+	opacity: .8;
+	border: solid 5px white;
+}
+
+.mainContainer {
+	background: #eedfcc;
+	opacity: .8;
+	color: #53868b;
+}
+

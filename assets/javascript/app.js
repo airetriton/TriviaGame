@@ -75,11 +75,12 @@ var correctWin;
 		startGame = $("<button>");
 		startGame.addClass("text-center btn btn-primary btn-lg startBtn");
 		startGame.text("Start");
-		$("#header").html(startGame);
+		$("#header").append("startGame");
+		// document.getElementById("header").appendChild(node); 
 	};
 
-	// headingBtn();
-	console.log(startGame);
+	headingBtn();
+	console.log(startGame)
 
 // 	$(".startBtn").on("click", function(event){
 // 		createTriviaForm();

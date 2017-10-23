@@ -6,22 +6,25 @@ body {
 
 #header {
 	background: #faebd7;
-	opacity: .9;
+	opacity: .8;
 	text-align: center;
 	color: #53868b;
 	border: solid 5px #eedfcc;
-	border-radius: 20px;
+	border-radius: 10px;
 }
 
 .container {
-	background: white;
-	opacity: .8;
-	border: solid 5px white;
+	
+	
 }
 
 .mainContainer {
 	background: #eedfcc;
 	opacity: .8;
 	color: #53868b;
+	border: solid 5px white;
+	border-radius: 10px
 }
+
+
 

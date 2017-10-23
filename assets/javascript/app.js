@@ -78,65 +78,89 @@ var correctWin;
 		$("#header").html(startGame);
 	};
 
-	headingBtn();
+	// headingBtn();
+	console.log(startGame);
 
-	$(".startBtn").on("click", function(event){
-		createTriviaForm();
-		timerTrivia();
-	});
+// 	$(".startBtn").on("click", function(event){
+// 		createTriviaForm();
+// 		timerTrivia();
+// 	});
 
-	function gameTimeOut (){
-		wrongLoss++;
-		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!";
-		$("#header").html(message);
-		setTimeout(wait, 10000);
-		}
+// 	function gameTimeOut (){
+// 		wrongLoss++;
+// 		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!";
+// 		$("#header").html(message);
+// 		setTimeout(wait, 10000);
+// 		}
 
-	function gameWin(){
-		correctWin++;
-		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You Win! You know a lot about dogs!";
-	}	
+// 	function gameWin(){
+// 		correctWin++;
+// 		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You Win! You know a lot about dogs!";
+// 		$("#header").html(message);
+// 		setTimeout(wait, 5000);
+		
+// 	};	
 
-//  You'll create a trivia form with multiple choice or true/false options (your choice).
+// 	function gameLoss(){
+// 		wrongLoss++;
+// 		message = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You Lose.  Don't worry you'll do better next time.";
+// 		$("#header").html(message);
+// 		setTimeout(wait, 5000);
+
+// 	}
+
+// //  You'll create a trivia form with multiple choice or true/false options (your choice).
 	
-	function createTriviaForm (){
-		// this will help loop through the array (remember to find your array words)
+// 	function createTriviaForm (){
+// 		// this will help loop through the array (remember to find your array words)
 
-		for (i=0; i<questionsArray.length; i++){
-			question = $("<p class = 'text-center</p>");
-			$(".mainContainer").html(question);
+// 		for (i=0; i<questionsArray.length; i++){
+// 			question = $("<p class = 'text-center</p>");
+// 			$(".mainContainer").html(question);
 			
 
-			for(j=0; j<choices.length; j++){
-			var answerBtn = $("<button>");
-			answerBtn.addClass("text-center btn btn-primary btn-lg answer");
-			answerBtn.text(choices[j]);
-			$(".mainContainer").append(answerBtn);
-			}
+// 			for(j=0; j<choices.length; j++){
+// 			var answerBtn = $("<button>");
+// 			answerBtn.addClass("text-center btn btn-primary btn-lg answer");
+// 			answerBtn.text(choices[j]);
+// 			$(".mainContainer").append(answerBtn);
+// 			}
 
-			$(".answer").on("click", function(event)){
-				selectedAnswer = $(this).text();
+// 			$(".answer").on("click", function(event)){
+// 				selectedAnswer = $(this).text();
 
-				if(selectedAnswer === correctAnswer){
-					triviaWin();
-					clearInterval(timer);
-				} else {
-					clearInterval(timer);
-					triviaLose();
-				}
-			}
-		};
-	};	
+// 				if(selectedAnswer === correctAnswer){
+// 					triviaWin();
+// 					clearInterval(timer);
+// 				} else {
+// 					clearInterval(timer);
+// 					triviaLose();
+// 				}
+// 			}
+// 		};
+// 	};	
+
+// 	function timerGame(){
+// 		timer = setInterval(thirtySeconds, 1000);
+// 		function thirtySeconds(){
+// 			if(counter === 0){
+// 				clearInterval(timer);
+// 				gameTimeOut();
+// 			}
+// 			if (counter > 0){
+// 				counter--;
+// 			}
+// 			$(".timer").html(counter);
+// 		};
+// 	};			
 
 				
 
-				
 
+// 		};
+// 		createTriviaForm();
 
-		};
-		createTriviaForm();
-
-		console.log(createTriviaForm);
+// 		console.log(createTriviaForm);
 			
 
 			// var newContainerDiv = $(“<div>”);  //create new div
@@ -165,7 +189,7 @@ var correctWin;
 
 			//set attribute on container element for correctAnswer (ref index of the questions array)	
 
-			newContainerDiv.attr(“index”, i); 
+			// newContainerDiv.attr(“index”, i); 
 			
 
 			//then append to the game page (this should be the last thing that "runs")
@@ -176,7 +200,7 @@ var correctWin;
 
 		//function check the answers
 
-		$
+		
 		//function to display results on page
 		//how to set the timer in js (google)
 		//look for timeout method

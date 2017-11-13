@@ -1,30 +1,83 @@
 body {
-	background: url("../images/collagedog.jpg");
 	font-family: "Montserrat", "Comic Sans", "Palatino Linotype", Impact, sans-serif;
 
 }
 
-#header {
-	background: #faebd7;
-	opacity: .8;
+.wrapper{
+	background: url("../images/collagedog.jpg");
+	opacity: .9;
+}
+
+.header {
+	/*background: #faebd7;*/
+	background: white;
+	opacity: .9;
 	text-align: center;
 	color: #53868b;
 	border: solid 5px #eedfcc;
-	border-radius: 10px;
+	border-radius: 5px;
+
 }
 
-.container {
+h1 {
+
+}
+
+h2 {
+
+}
+
+.startBtn {
+	float: left;
+	text-align: center;
+	background: #095159;
+	color: white;
+	height: 50px;
+	width: 100px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.container-fluid {
 	
 	
+}
+
+.timer {
+
 }
 
 .mainContainer {
-	background: #eedfcc;
-	opacity: .8;
-	color: #53868b;
-	border: solid 5px white;
-	border-radius: 10px
+	
 }
+
+.clockdiv {
+	float: right;
+	text-align: center;
+	font-size: 28px;
+	background: #53868b;
+	padding: 10px;
+	border: solid 10px #095159;
+	color: white;
+	opacity: .9;
+	border-radius: 40px;
+}
+
+.question {
+	color: black;
+	background: white;
+	font-size: 18px;
+	border: solid 2px #095159;
+	border-radius: 5px;
+
+}
+
+.answerBtn{
+	color: black;
+	background: white;
+}
+
+
 
 
 

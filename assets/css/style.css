@@ -1,11 +1,10 @@
 body {
 	font-family: "Montserrat", "Comic Sans", "Palatino Linotype", Impact, sans-serif;
-
+	background: url("../images/collagedog.jpg");
 }
 
 .wrapper{
-	background: url("../images/collagedog.jpg");
-	opacity: .9;
+	
 }
 
 .header {
@@ -28,53 +27,76 @@ h2 {
 }
 
 .startBtn {
-	float: left;
+	/*float: left;*/
 	text-align: center;
 	background: #095159;
 	color: white;
 	height: 50px;
-	width: 100px;
+	width: 150px;
 	margin: 10px;
-	padding: 10px;
+	padding: 60px;
+	z-index-: 1;
 }
 
-.container-fluid {
-	
-	
-}
 
-.timer {
-
-}
-
-.mainContainer {
+#mainContainer {
+	clear: both;
+	background: white;
+	opacity: .9;
+	text-align: center;
+	color: #53868b;
+	border: solid 5px #eedfcc;
+	border-radius: 5px;
 	
 }
 
 .clockdiv {
+	font-family: "digital dream";
 	float: right;
 	text-align: center;
-	font-size: 28px;
-	background: #53868b;
-	padding: 10px;
+	font-size: 18px;
+	background: black;
+	padding: 20px;
 	border: solid 10px #095159;
-	color: white;
+	color: #76ee00;
 	opacity: .9;
-	border-radius: 40px;
+	border-radius: 10px;
 }
 
 .question {
-	color: black;
-	background: white;
-	font-size: 18px;
-	border: solid 2px #095159;
-	border-radius: 5px;
-
+	color: #53868b;
+	font-weight: bold;
+	font-size: 24px;
 }
 
-.answerBtn{
-	color: black;
+label {
+	font-size: 18px;
+	margin: 4px 8px;
+	line-height: 60px;
+}
+
+#submit{
+	margin: 10px;
+	padding: 20px 30px;
+	background: #095159;
+	color: white;
+	text-align: center;
+	position: center;
+	border-radius: 5px;
+	opacity: .9;
+	font-size: 22px;
+}
+
+#results{
 	background: white;
+	opacity: .9;
+	text-align: center;
+	color: #53868b;
+	font-weight: 700;
+	font-size: 32px;
+	border: solid 5px #eedfcc;
+	border-radius: 5px;
+	line-height: 40px;
 }
 
 
